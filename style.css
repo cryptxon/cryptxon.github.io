@@ -1,0 +1,174 @@
+:root {
+    --bg: #f5f5f6;
+    --card-bg: #ffffff;
+    --accent: #c9732e; /* Оранжевый цвет для текста */
+    --muted: #9a9a9a; /* Цвет для тёмных серых теней/разделителей */
+    --card-shadow: 0 6px 20px rgba(25, 25, 25, 0.06);
+    --radius: 12px;
+    --max-w: 360px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: var(--bg);
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    align-items: center; /* Изменено на center для вертикального центрирования */
+    justify-content: center;
+    padding: 48px 16px; /* Увеличение отступов */
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Центрирование содержимого по вертикали */
+}
+
+.header {
+    margin: 40px 0;
+    text-align: center; /* Центрирование заголовков */
+}
+
+.header__avatar {
+    border-radius: 50%; /* Круглая форма для аватара */
+    width: 150px; /* Фиксированный размер для аватара */
+    height: auto; /* Автоматическая высота */
+    object-fit: cover; /* Обеспечивает правильное обрезание изображения */
+}
+
+.header__title {
+    margin: 20px 0 10px; /* Уменьшение отступов */
+    font-size: 36px; /* Увеличение размера шрифта заголовка */
+    line-height: 1.2;
+}
+
+.header__subtitle {
+    color: #8f8f8f;
+    font-size: 18px; /* Увеличение размера шрифта подзаголовка */
+    line-height: 1.4;
+    margin: 0;
+}
+
+.links {
+    width: 320px;
+    margin-bottom: 40px;
+}
+
+.links__header {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 20px 0; /* Отступы сверху и снизу */
+    text-align: center; /* Центрируем текст */
+}
+
+.links__container {
+    list-style-type: none;
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 10px;
+    box-shadow: var(--card-shadow); /* Добавление тени для глубины */
+}
+
+.links__link,
+.links__title {
+    font-size: 14px;
+}
+
+.links__link {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Центрирование элементов по вертикали */
+    padding: 10px 0; /* Увеличение отступов для удобства клика */
+    gap: 20px;
+    border-bottom: 1px solid #dadada;
+}
+
+.links__link:last-child {
+    border-bottom: none; /* Убираем границу у последней ссылки */
+}
+
+.links__link,
+.links__link:visited {
+    text-decoration: none;
+    color: var(--accent); /* Цвет текста ссылки */
+}
+
+.links__title {
+    margin: 0;
+}
+
+footer {
+    margin: 40px 0; /* Увеличение отступа снизу */
+}
+
+.button-link {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px; /* Отступы для кнопки */
+    width: 320px;
+    background-color: transparent; /* Прозрачный фон по умолчанию */
+    border: 2px solid #ff8c00; /* Оранжевая рамка */
+    border-radius: 20px;
+
+    font-size: 16px; /* Размер шрифта кнопки */
+    
+    color: #ff8c00; /* Оранжевый цвет текста */
+    text-decoration: none;
+
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход для фона и цвета текста */
+}
+
+.button-link:hover {
+    background-color: #ff8c00; /* Оранжевый фон при наведении */
+    color: #ffffff; /* Белый цвет текста при наведении */
+}
+
+.button-link:active {
+    background-color: #e07b00; /* Темнее оранжевый цвет при нажатии */
+    color: #ffffff; /* Белый цвет текста при нажатии */
+}
+
+
+.card {
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--max-w);
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    padding: 18px 20px;
+}
+
+.stack-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    margin-top: 6px; /* Отступ сверху */
+}
+
+.stack-list { list-style: none; padding: 0; margin: 0; }
+.stack-list li {
+  display: flex;
+  align-items: center;      /* вертикальное выравнивание */
+  gap: 10px;                /* расстояние между иконкой и текстом */
+  padding: 4px 8px;
+  font-size: 14px;
+}
+.stack-list .icon {
+  width: 20px;              /* фиксированная ширина для иконки */
+  text-align: center;
+  line-height: 1;
+  font-size: 16px;
+}
